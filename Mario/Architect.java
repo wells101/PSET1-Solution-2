@@ -7,7 +7,7 @@ package Mario;
  * @author Gaming
  */
 public class Architect {
-    public static pyramid(int h){
-        return new pyramid(h);
+    public static Pyramid pyramid(int h){
+        return new Pyramid(h);
     }
 }
