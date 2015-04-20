@@ -9,5 +9,6 @@ package OutputStrategy;
  * @author Gaming
  */
 public interface OutputStrategy {
-    void outputData(int height);
+    public void outputData(int height);
+    public void outputData(String s);
 }

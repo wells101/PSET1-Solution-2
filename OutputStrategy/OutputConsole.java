@@ -24,4 +24,8 @@ public class OutputConsole implements OutputStrategy
             System.out.println(inBuilder.toString());
            }
        }
+    
+    public void outputData (String s){ //PSET3's trick: Get the Pyramid.java to kick out a string to me.
+        System.out.println(s);
+    }
 }

@@ -32,4 +32,11 @@ public class OutputFile implements OutputStrategy
             System.out.println("Error: " + e.toString());
         }
     }
+    public void outputData(String s){
+        try (PrintWriter file = new PrintWriter("pyramid.txt")){
+            file.print(s); //print the thing
+        } catch (IOException e){
+            System.out.println("Error: " + e.toString());
+        }
+    }
 }

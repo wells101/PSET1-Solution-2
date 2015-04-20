@@ -20,4 +20,8 @@ public class OutputContext {
     public void process(int height){
         myStrategy.outputData(height);
     }
+    
+    public void process(String s){
+        myStrategy.outputData(s);
+    }
 }
