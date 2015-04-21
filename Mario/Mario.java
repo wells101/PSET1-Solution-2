@@ -15,7 +15,7 @@ public class Mario {
             height = inputScanner.nextInt();
         } while (height > 23 || height < 0);
         
-        Pyramid myPyramid = Architect.pyramid(height);
+        Pyramid myPyramid = Architect.getInstance().pyramid(height);
         
         do{
             System.out.println("Choose Output. 1: Console 2: File");
