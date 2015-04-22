@@ -4,8 +4,22 @@ import java.util.Scanner;
 import OutputStrategy.*;
 
 public class Mario {
+    
+    private Architect architect;
+    
     public static void main(String[] args) {
-       
+     
+        Mario game = new Mario(Architect.getInstance());
+        
+        game.start();
+    }
+
+    public Mario(Architect architect){
+        this.architect = architect;
+    }
+    
+    public void start(){
+        
         Scanner inputScanner = new Scanner(System.in);
         OutputContext myContext = new OutputContext();
         int height, outputOption;
@@ -15,7 +29,7 @@ public class Mario {
             height = inputScanner.nextInt();
         } while (height > 23 || height < 0);
         
-        Pyramid myPyramid = Architect.getInstance().pyramid(height);
+        Pyramid myPyramid = architect.getInstance().pyramid(height);
         
         do{
             System.out.println("Choose Output. 1: Console 2: File");
@@ -32,7 +46,6 @@ public class Mario {
             myContext.process(myPyramid.toString());
         }
 
-
-   }
+    }
 
 }
