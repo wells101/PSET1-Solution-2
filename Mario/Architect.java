@@ -1,7 +1,4 @@
 package Mario;
-
-
-
 /**
  *
  * @author Gaming

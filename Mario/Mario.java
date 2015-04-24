@@ -2,6 +2,8 @@ package Mario;
 
 import java.util.Scanner;
 import OutputStrategy.*;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Mario {
     
@@ -9,9 +11,12 @@ public class Mario {
     
     public static void main(String[] args) {
      
-        Mario game = new Mario(Architect.getInstance());
-        
-        game.start();
+        ApplicationContext context = new ClassPathXmlApplicationContext("./resources/application.xml");
+        Mario obj = (Mario) context.getBean("mario1");
+        obj.start();
+//        Mario game = new Mario(Architect.getInstance());
+//        
+//        game.start();
     }
 
     public Mario(Architect architect){
